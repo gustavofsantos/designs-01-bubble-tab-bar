@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import Main from "./pages/Main";
+import "./assets/styles/index.scss";
 
-const Index = () => <p>Funcionando :D</p>;
-
-ReactDOM.render(<Index />, document.getElementById("root"));
+ReactDOM.render(<Main />, document.getElementById("root"));
