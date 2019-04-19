@@ -7,7 +7,8 @@ export default function Navigation(props) {
     <div className="main-navigation">
       <div>
         <div
-          className={selected === "home" ? "active" : ""}
+          id="home"
+          className={selected === "home" ? "active active__home" : ""}
           onClick={() => setSelected("home")}
         >
           <i className="fas fa-home" />
@@ -16,7 +17,8 @@ export default function Navigation(props) {
       </div>
       <div>
         <div
-          className={selected === "logger" ? "active" : ""}
+          id="logger"
+          className={selected === "logger" ? "active active__logger" : ""}
           onClick={() => setSelected("logger")}
         >
           <i className="far fa-clock" />
@@ -25,7 +27,7 @@ export default function Navigation(props) {
       </div>
       <div>
         <div
-          className={selected === "docs" ? "active" : ""}
+          className={selected === "docs" ? "active active__docs" : ""}
           onClick={() => setSelected("docs")}
         >
           <i className="far fa-folder-open" />
@@ -34,7 +36,7 @@ export default function Navigation(props) {
       </div>
       <div>
         <div
-          className={selected === "menu" ? "active" : ""}
+          className={selected === "menu" ? "active active__menu" : ""}
           onClick={() => setSelected("menu")}
         >
           <i className="fas fa-bars" />
