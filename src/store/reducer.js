@@ -12,6 +12,8 @@ export default function reducer(state = INITIAL_STATE, action) {
       return { ...state, page: "DOCS" };
     case "NAVIGATE_MENU":
       return { ...state, page: "MENU" };
+    case "NAVIGATE_SPEECH":
+      return { ...state, page: "SPEECH" };
     default:
       return { ...state, page: "HOME" };
   }

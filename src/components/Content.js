@@ -1,16 +1,16 @@
 import React from "react";
 import { connect } from "react-redux";
 import Home from "../pages/Home";
-import Logger from "../pages/Logger";
 import Docs from "../pages/Docs";
 import Menu from "../pages/Menu";
+import Speech from "../pages/Speech";
 
 export function Content(props) {
   switch (props.page) {
     case "HOME":
       return <Home />;
-    case "LOGGER":
-      return <Logger />;
+    case "SPEECH":
+      return <Speech />;
     case "DOCS":
       return <Docs />;
     case "MENU":

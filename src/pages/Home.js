@@ -14,36 +14,6 @@ export default function Home() {
           </button>
         </div>
       </div>
-
-      <div>
-        <p>teste teste</p>
-        <p>teste teste</p>
-        <p>teste teste</p>
-        <p>teste teste</p>
-        <p>teste teste</p>
-        <p>teste teste</p>
-        <p>teste teste</p>
-        <p>teste teste</p>
-        <p>teste teste</p>
-        <p>teste teste</p>
-        <p>teste teste</p>
-        <p>teste teste</p>
-        <p>teste teste</p>
-        <p>teste teste</p>
-        <p>teste teste</p>
-        <p>teste teste</p>
-        <p>teste teste</p>
-        <p>teste teste</p>
-        <p>teste teste</p>
-        <p>teste teste</p>
-        <p>teste teste</p>
-        <p>teste teste</p>
-        <p>teste teste</p>
-        <p>teste teste</p>
-        <p>teste teste</p>
-        <p>teste teste</p>
-        <p>teste teste</p>
-      </div>
     </div>
   );
 }

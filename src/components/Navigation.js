@@ -4,7 +4,8 @@ import {
   navigateHomePage,
   navigateLoggerPage,
   navigateMenuPage,
-  navigateDocsPage
+  navigateDocsPage,
+  navigateSpeechPage
 } from "../store/actions";
 
 export function Navigation(props) {
@@ -22,12 +23,12 @@ export function Navigation(props) {
       </div>
       <div>
         <div
-          id="logger"
-          className={props.page === "LOGGER" ? "active active__logger" : ""}
-          onClick={props.goPageLogger}
+          id="speech"
+          className={props.page === "SPEECH" ? "active active__speech" : ""}
+          onClick={props.goPageSpeech}
         >
-          <i className="far fa-clock" />
-          <p>Logger</p>
+          <i className="fas fa-volume-up" />
+          <p>Speech</p>
         </div>
       </div>
       <div>
@@ -58,9 +59,9 @@ const mapState = state => ({
 
 const mapDispatch = dispatch => ({
   goPageHome: () => dispatch(navigateHomePage()),
-  goPageLogger: () => dispatch(navigateLoggerPage()),
   goPageDocs: () => dispatch(navigateDocsPage()),
-  goPageMenu: () => dispatch(navigateMenuPage())
+  goPageMenu: () => dispatch(navigateMenuPage()),
+  goPageSpeech: () => dispatch(navigateSpeechPage())
 });
 
 export default connect(

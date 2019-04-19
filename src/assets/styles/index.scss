@@ -14,16 +14,56 @@ body {
   font-family: "Source Sans Pro", sans-serif;
 }
 
+select {
+  width: 100%;
+  margin: 8px 0px 8px 0px;
+  background-color: #eee;
+  color: $font-foreground;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  padding: 8px;
+}
+
+option {
+  border: none;
+  border-radius: 8px;
+}
+
+input {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #eee;
+  color: $font-foreground;
+  border: none;
+  padding: 16px;
+  font-size: 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  outline: none;
+  transition: background-color 0.2s ease-in;
+
+  &:focus {
+    transition: background-color 0.3s ease-in;
+    background-color: white;
+  }
+}
+
 .main {
   display: grid;
   grid-template-rows: auto 64px;
   height: 100%;
+  background: $app-background;
 }
 
 .main-content {
-  background-color: white;
   overflow-y: scroll;
   z-index: 1;
+  margin: 0px 8px 0px 8px;
+  color: $font-foreground;
 }
 
 .main-content-header {
@@ -33,8 +73,7 @@ body {
   box-sizing: border-box;
   align-items: center;
   width: 100%;
-  padding: 16px 8px 16px 8px;
-  color: #666;
+  padding: 16px 0px 16px 0px;
   user-select: none;
 
   .header-actions {
@@ -53,7 +92,7 @@ body {
     border: none;
     width: 38px;
     height: 38px;
-    color: #666;
+    color: $font-foreground;
   }
 
   .header-action-img {
@@ -101,7 +140,7 @@ body {
       }
 
       p {
-        font-size: 12px;
+        font-size: 13px;
         overflow: hidden;
         width: 0;
         color: #666;
@@ -124,17 +163,17 @@ body {
           }
         }
 
-        &__logger {
-          background-color: rgba($color: $main-logger, $alpha: 0.1);
+        &__speech {
+          background-color: rgba($color: $main-speech, $alpha: 0.1);
           i {
             transition: color 0.3s ease-in;
-            color: $main-logger;
+            color: $main-speech;
           }
 
           p {
             transition: all 0.3s ease-in;
             width: 48px;
-            color: $main-logger;
+            color: $main-speech;
           }
         }
 

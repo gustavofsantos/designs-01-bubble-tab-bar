@@ -21,3 +21,9 @@ export function navigateMenuPage() {
     type: "NAVIGATE_MENU"
   };
 }
+
+export function navigateSpeechPage() {
+  return {
+    type: "NAVIGATE_SPEECH"
+  };
+}
