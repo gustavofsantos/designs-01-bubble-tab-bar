@@ -1,0 +1,30 @@
+{
+  "name": "designs-01-bubble-tab-bar",
+  "version": "1.0.0",
+  "description": "https://dribbble.com/shots/6005732-Bubble-Icon-Tab-Bar-Open-Source",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gustavofsantos/designs-01-bubble-tab-bar.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gustavofsantos/designs-01-bubble-tab-bar/issues"
+  },
+  "homepage": "https://github.com/gustavofsantos/designs-01-bubble-tab-bar#readme",
+  "dependencies": {
+    "parcel-bundler": "^1.12.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1"
+  }
+}
