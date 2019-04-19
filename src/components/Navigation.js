@@ -1,15 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
+import { connect } from "react-redux";
+import {
+  navigateHomePage,
+  navigateLoggerPage,
+  navigateMenuPage,
+  navigateDocsPage
+} from "../store/actions";
 
-export default function Navigation(props) {
-  const [selected, setSelected] = useState("");
-
+export function Navigation(props) {
   return (
     <div className="main-navigation">
       <div>
         <div
           id="home"
-          className={selected === "home" ? "active active__home" : ""}
-          onClick={() => setSelected("home")}
+          className={props.page === "HOME" ? "active active__home" : ""}
+          onClick={props.goPageHome}
         >
           <i className="fas fa-home" />
           <p>Home</p>
@@ -18,8 +23,8 @@ export default function Navigation(props) {
       <div>
         <div
           id="logger"
-          className={selected === "logger" ? "active active__logger" : ""}
-          onClick={() => setSelected("logger")}
+          className={props.page === "LOGGER" ? "active active__logger" : ""}
+          onClick={props.goPageLogger}
         >
           <i className="far fa-clock" />
           <p>Logger</p>
@@ -27,8 +32,8 @@ export default function Navigation(props) {
       </div>
       <div>
         <div
-          className={selected === "docs" ? "active active__docs" : ""}
-          onClick={() => setSelected("docs")}
+          className={props.page === "DOCS" ? "active active__docs" : ""}
+          onClick={props.goPageDocs}
         >
           <i className="far fa-folder-open" />
           <p>Docs</p>
@@ -36,8 +41,8 @@ export default function Navigation(props) {
       </div>
       <div>
         <div
-          className={selected === "menu" ? "active active__menu" : ""}
-          onClick={() => setSelected("menu")}
+          className={props.page === "MENU" ? "active active__menu" : ""}
+          onClick={props.goPageMenu}
         >
           <i className="fas fa-bars" />
           <p>Menu</p>
@@ -46,3 +51,19 @@ export default function Navigation(props) {
     </div>
   );
 }
+
+const mapState = state => ({
+  page: state.page
+});
+
+const mapDispatch = dispatch => ({
+  goPageHome: () => dispatch(navigateHomePage()),
+  goPageLogger: () => dispatch(navigateLoggerPage()),
+  goPageDocs: () => dispatch(navigateDocsPage()),
+  goPageMenu: () => dispatch(navigateMenuPage())
+});
+
+export default connect(
+  mapState,
+  mapDispatch
+)(Navigation);

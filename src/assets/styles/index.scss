@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: none;
 }
 
 html,
@@ -21,6 +22,27 @@ body {
 
 .main-content {
   background-color: white;
+  overflow-y: scroll;
+}
+
+.main-content-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
+  align-items: center;
+  width: 100%;
+  padding: 16px 8px 16px 8px;
+  color: #666;
+  user-select: none;
+
+  .header-action-button {
+    background: none;
+    border: none;
+    width: 38px;
+    height: 38px;
+    color: #666;
+  }
 }
 
 .main-navigation {
@@ -47,8 +69,8 @@ body {
 
       i {
         display: flex;
-        height: 38px;
-        width: 38px;
+        height: 48px;
+        width: 48px;
         text-align: center;
         align-items: center;
         justify-content: center;
